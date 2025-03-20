@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 108%;
+  height: 800px;
+  gap: 100px;
+}
+
+.header {
+  font-size: 2rem;
+  color: #bb86fc;
+  text-align: center;
+}
+
+.input-box {
+  display: flex;
+  width: 108%;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bb86fc;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #3700b3;
+  outline: none;
+}
+
+#submit {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #bb86fc;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+#submit:hover {
+  background-color: #bb86fc;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #bb86fc;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+}
+
+.nav .delete {
+  flex: 2;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.note,
+.completed {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note:hover,
+.completed:hover {
+  background-color: #444;
+  scale: 105%;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#tra {
+  color: #ff5555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#tra:hover {
+  color: #ca0000;
+}
+
+.del {
+  border: 1px solid #ca0000;
+}
+.del:hover {
+  background-color: #e40000;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #ca0000;
+}
+
+.complete, .active, .all {
+  border: 1px solid #bb86fc;
+}
+
+.complete:hover, .active:hover, .all:hover {
+  background-color: #bb86fc;
+  color: #1a1a1a;
+  box-shadow: 0 0 10px #bb86fc;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.note, .completed, .nav{
+  animation: slideIn 0.8s ease-out;
+}
+
